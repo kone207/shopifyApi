@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using shopifyApi.Data;
 using shopifyApi.Models;
 using shopifyApi.Services;
+using shopifyApi.Services.Interfaces;
 
 namespace shopifyApi.Controllers
 {
@@ -10,9 +11,9 @@ namespace shopifyApi.Controllers
     [ApiController]
     public class ItemController : ControllerBase
     {
-        private readonly ItemService _itemService;
+        private readonly IitemService _itemService;
 
-        public ItemController(ItemService itemService)
+        public ItemController(IitemService itemService)
         {
             _itemService = itemService;
         }
